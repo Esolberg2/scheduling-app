@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="429.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AppointmentsController">
+   <children>
+      <TableView fx:id="table" layoutX="36.0" layoutY="79.0" prefHeight="200.0" prefWidth="528.0" />
+      <Group layoutX="36.0" layoutY="53.0">
+         <children>
+            <HBox alignment="CENTER" layoutY="-46.0" prefHeight="26.0" prefWidth="221.0" spacing="10.0">
+               <children>
+                  <RadioButton fx:id="monthButton" mnemonicParsing="false" selected="true" text="Month">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="timeInterval" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="weekButton" mnemonicParsing="false" text="Week" toggleGroup="$timeInterval" />
+                  <RadioButton fx:id="allButton" mnemonicParsing="false" text="All" toggleGroup="$timeInterval" />
+               </children>
+            </HBox>
+         </children>
+      </Group>
+      <HBox alignment="CENTER" layoutX="105.0" layoutY="46.0" prefHeight="26.0" prefWidth="357.0" spacing="10.0">
+         <children>
+            <Text fx:id="datePickerLabel" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="57.5" />
+            <DatePicker fx:id="datePicker" />
+            <Button mnemonicParsing="false" onAction="#searchDate" prefHeight="26.0" prefWidth="77.0" text="Search" />
+         </children>
+      </HBox>
+      <VBox layoutX="36.0" layoutY="286.0" prefHeight="109.0" prefWidth="142.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addAppointment" prefHeight="26.0" prefWidth="130.0" text="New Appointment" />
+            <Button mnemonicParsing="false" onAction="#editAppointment" prefHeight="26.0" prefWidth="130.0" text="Edit Appointment" />
+            <Button mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="26.0" prefWidth="130.0" text="Delete Appointment" />
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="26.0" prefWidth="130.0" text="Back" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

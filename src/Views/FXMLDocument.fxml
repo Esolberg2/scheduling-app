@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="449.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXMLDocumentController">
+    <children>
+        <Button fx:id="loginButton" layoutX="144.0" layoutY="238.0" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="139.0" text="Submit">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Button>
+      <TextField fx:id="username" layoutX="213.0" layoutY="137.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></TextField>
+      <Label fx:id="languageLabel" layoutX="14.0" layoutY="14.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Label>
+      <Label fx:id="language" layoutX="14.0" layoutY="42.0" prefHeight="17.0" prefWidth="62.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Label>
+      <Label fx:id="errorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="300.0" prefHeight="17.0" prefWidth="292.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></Label>
+      <VBox alignment="CENTER" layoutX="14.0" layoutY="137.0" prefHeight="69.0" prefWidth="200.0" spacing="12.0">
+         <children>
+            <Label fx:id="userNameLabel" alignment="CENTER" prefHeight="26.0" prefWidth="200.0">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Label>
+            <Label fx:id="passwordLabel" alignment="CENTER" prefHeight="26.0" prefWidth="200.0">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font></Label>
+         </children>
+      </VBox>
+      <PasswordField fx:id="password" layoutX="213.0" layoutY="177.0">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font></PasswordField>
+      <Label fx:id="zoneLabel" layoutX="319.0" layoutY="14.0" />
+      <Label fx:id="zone" layoutX="319.0" layoutY="42.0" />
+    </children>
+</AnchorPane>
